@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevConnect | Social Media Feed</title>
+    <style>
+        /* Basic clean styling for your project */
+        body { font-family: Arial, sans-serif; background-color: #f0f2f5; margin: 0; padding: 20px; }
+        .container { display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .profile-img { width: 50px; height: 50px; border-radius: 50%; background: #ccc; display: inline-block; vertical-align: middle; }
+        .post-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+        .post-author { font-weight: bold; }
+        .post-time { color: #65676b; font-size: 0.85em; }
+        textarea { width: 100%; border: 1px solid #ccc; border-radius: 6px; padding: 10px; resize: none; box-sizing: border-box; }
+        button { background-color: #1877f2; color: white; border: none; padding: 8px 16px; border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+        button:hover { background-color: #166fe5; }
+        .actions { display: flex; justify-content: space-around; border-top: 1px solid #e4e6eb; padding-top: 10px; margin-top: 10px; }
+        .action-btn { background: none; border: none; color: #65676b; font-weight: bold; cursor: pointer; }
+        .trending-list { list-style: none; padding: 0; }
+        .trending-list li { padding: 8px 0; border-bottom: 1px solid #f0f2f5; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- LEFT SIDEBAR: PROFILE SUMMARY -->
+        <aside class="left-column">
+            <div class="card">
+                <div class="post-header">
+                    <div class="profile-img"></div>
+                    <div>
+                        <div class="post-author">Alex Juma</div>
+                        <div class="post-time">@alex_codes</div>
+                    </div>
+                </div>
+                <p>💻 High school builder in Arusha | Shipping code on Hack Club 🚀</p>
+                <hr style="border: 0; border-top: 1px solid #e4e6eb;">
+                <p><strong>Followers:</strong> 342 &nbsp;&nbsp; <strong>Following:</strong> 189</p>
+            </div>
+        </aside>
+
+        <!-- CENTER COLUMN: MAIN SOCIAL FEED -->
+        <main class="center-column">
+            <!-- Create Post Box -->
+            <div class="card">
+                <h3>Create Post</h3>
+                <form action="#" method="POST">
+                    <textarea rows="3" placeholder="What are you building today, Alex?"></textarea>
+                    <button type="submit">Post to Feed</button>
+                </form>
+            </div>
+
+            <!-- Feed Item 1 -->
+            <div class="card">
+                <div class="post-header">
+                    <div class="profile-img" style="background: #4a90e2;"></div>
+                    <div>
+                        <div class="post-author">Sarah Kimaro</div>
+                        <div class="post-time">2 hours ago</div>
+                    </div>
+                </div>
+                <p>Just finished assembling my custom PCB board for the OnBoard project! Everything is soldering perfectly. Can't wait to test the firmware tonight! 🛠️⚡</p>
+                <div class="actions">
+                    <button class="action-btn">👍 Like (24)</button>
+                    <button class="action-btn">💬 Comment (5)</button>
+                    <button class="action-btn">🔄 Share</button>
+                </div>
+            </div>
+
+            <!-- Feed Item 2 -->
+            <div class="card">
+                <div class="post-header">
+                    <div class="profile-img" style="background: #e24a4a;"></div>
+                    <div>
+                        <div class="post-author">Michael Peter</div>
+                        <div class="post-time">5 hours ago</div>
+                    </div>
+                </div>
+                <p>Does anyone have tips for debugging a 2D JavaScript game engine? My player collision bounds are lagging behind the actual sprites. Let me know below!</p>
+                <div class="actions">
+                    <button class="action-btn">👍 Like (12)</button>
+                    <button class="action-btn">💬 Comment (18)</button>
+                    <button class="action-btn">🔄 Share</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- RIGHT SIDEBAR: TRENDING & NOTIFICATIONS -->
+        <aside class="right-column">
+            <div class="card">
+                <h3>Trending Topics</h3>
+                <ul class="trending-list">
+                    <li><strong>#HackClubArusha</strong><br><small>1,240 posts</small></li>
+                    <li><strong>#JavaScript</strong><br><small>8,432 posts</small></li>
+                    <li><strong>#WebDesign</strong><br><small>5,110 posts</small></li>
+                    <li><strong>#OpenSource</strong><br><small>3,901 posts</small></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+</body>
+</html>
